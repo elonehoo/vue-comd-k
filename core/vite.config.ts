@@ -1,7 +1,6 @@
 import * as path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import recordTime from '@elonehoo/vite-plugin-record-time'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,7 +10,6 @@ export default defineConfig({
     },
   },
   plugins: [
-    recordTime(),
     Vue()
   ],
   build: {

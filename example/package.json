@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": "true",
   "description": "Extensible command+k interface for Vue.",
-  "scripts": {},
+  "scripts": {
+    "dev": "vite --port 3333 --open",
+    "build": "vite build",
+    "preview": "vite preview --port 8766 --open"
+  },
   "keywords": [
     "command",
     "k",

@@ -2,7 +2,9 @@
   "name": "vue-comd-k",
   "version": "0.0.0",
   "description": "Extensible command+k interface for Vue.",
-  "scripts": {},
+  "scripts": {
+    "dev":"vite build"
+  },
   "keywords": [
     "command",
     "k",
@@ -11,7 +13,6 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
   "dependencies": {
-    "@elonehoo/vite-plugin-record-time": "^0.0.3",
     "@vitejs/plugin-vue": "^3.2.0",
     "vite": "^3.2.4",
     "vue": "^3.2.45"
