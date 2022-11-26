@@ -16,9 +16,11 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
   "dependencies": {
+    "@elonehoo/keyboard": "^0.0.3",
+    "@elonehoo/vue-mac-keyboard": "^0.0.16",
     "@vitejs/plugin-vue": "^3.2.0",
     "vite": "^3.2.4",
     "vue": "^3.2.45",
-    "vue-comd-k":"workspace:*"
+    "vue-comd-k": "workspace:*"
   }
 }

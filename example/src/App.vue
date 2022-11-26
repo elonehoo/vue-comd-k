@@ -1,13 +1,23 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import KBarLayout from './components/KBarLayout.vue'
-const msg = ref('Example')
+import Keyboard from './components/Keyboard.vue'
 </script>
 
 <template>
   <div>
     <KBarLayout />
-    <h1>{{ msg }}</h1>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <Keyboard />
   </div>
 </template>
 

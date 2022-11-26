@@ -11,7 +11,5 @@ import { KBarProvider, KBarPortal, KBarPositioner, KBarAnimator, KBarSearch } fr
         </KBarAnimator>
       </KBarPositioner>
     </KBarPortal>
-
-    <h2>Example</h2>
   </KBarProvider>
 </template>
