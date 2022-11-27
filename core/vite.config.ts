@@ -1,6 +1,7 @@
 import * as path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
+import distCss from '@elonehoo/vite-plugin-dist-css'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,7 +11,8 @@ export default defineConfig({
     },
   },
   plugins: [
-    Vue()
+    Vue(),
+    distCss()
   ],
   build: {
     outDir: 'dist',

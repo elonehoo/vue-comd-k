@@ -32,7 +32,7 @@ const initialActions = [
     keywords: "sourcecode",
     section: "Navigation",
     perform: () => {
-      window.open("https://github.com/bytebase/vue-kbar", "_blank")
+      window.open("https://github.com/elonehoo/vue-comd-k", "_blank")
     }
 
   }),
@@ -72,7 +72,7 @@ function getActionRankingById(action) {
     :options="{ disabled, compare: compareAction }"
   >
     <KBarPortal>
-      <KBarPositioner style="z-index: 1000; background: var(--a3)">
+      <KBarPositioner  style="z-index: 1000;">
         <KBarAnimator
           style="
             max-width: calc(75 * var(--unit));
@@ -102,9 +102,12 @@ function getActionRankingById(action) {
     </KBarPortal>
 
     <Layout>
-      <template #navbar-search>
-        <DarkModeButton />
-      </template>
     </Layout>
   </KBarProvider>
 </template>
+
+<style scoped>
+.display{
+  display: flex;
+}
+</style>
