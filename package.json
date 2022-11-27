@@ -5,6 +5,7 @@
   "description": "Extensible command+k interface for Vue.",
   "scripts": {
     "build": "pnpm -C core run build",
+    "docs:dev":"pnpm -C docs run dev",
     "example:dev": "pnpm -C example run dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
