@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import KBarLayout from './components/KBarLayout.vue'
 import Keyboard from './components/Keyboard.vue'
 </script>

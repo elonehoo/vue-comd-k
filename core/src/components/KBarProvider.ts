@@ -1,58 +1,51 @@
-import { defineComponent, provide, Ref, ref, h } from 'vue'
-import { KBarState, KBarHandler, KBarMatches, Action, ActionId, VisualStateUpdateCallback, VisualState } from '../types/types'
+import { defineComponent, provide, h, PropType, watch, computed } from 'vue'
+import { Action, KBarOptions } from '../types'
 import { InternalEvents } from '../InternalEvents'
+import { useInternalState } from '../composables'
+
+export const DEFAULT_OPTIONS: KBarOptions = {
+  placeholder: "Type a command or search…",
+  disabled: false,
+};
 
 export default defineComponent({
-  setup() {
-    const state = ref<KBarState>({
-      search: "",
-      actions: [],
-      currentRootActionId: null,
-      activeIndex: 0,
-      visibility: "hidden",
-    });
-    const handler = ref<KBarHandler>({
-      setSearch(search: string) {
-        throw new Error("not implemented");
+  name: "KBarProvider",
+  props: {
+    options: {
+      type: Object as PropType<Partial<KBarOptions>>,
+      default: () => DEFAULT_OPTIONS,
+    },
+    actions: {
+      type: Array as PropType<Action[]>,
+      default: () => [],
+    },
+  },
+  setup(props) {
+    const { state, handler, matches, events } = useInternalState(
+      {
+        ...DEFAULT_OPTIONS,
+        ...props.options,
       },
-      registerActions(actions: Action[]) {
-        throw new Error("not implemented");
-      },
-      setCurrentRootAction(actionId: ActionId | null) {
-        throw new Error("not implemented");
-      },
-      setVisibility(cb: VisualStateUpdateCallback | VisualState) {
-        if (typeof cb === "function") {
-          cb = cb(state.value.visibility);
-        }
-        state.value.visibility = cb;
-      },
-      toggle() {
-        this.setVisibility((vs) => {
-          if (vs === "leaving" || vs === "hidden") {
-            return "entering";
-          } else {
-            return "leaving";
-          }
+      computed(() => props.actions)
+    );
+
+    watch(
+      () => props.options,
+      () => {
+        handler.value.setOptions({
+          ...DEFAULT_OPTIONS,
+          ...props.options,
         });
       },
-      show() {
-        throw new Error("not implemented");
-      },
-      hide() {
-        throw new Error("not implemented");
-      },
-    });
-    const matches = ref<KBarMatches>({
-      results: [],
-      rootActionId: null,
-    });
+      { deep: true }
+    );
 
-    provide<Ref<KBarState>>("k-bar-state", state);
-    provide<Ref<KBarHandler>>("k-bar-handler", handler);
-    provide<Ref<KBarMatches>>("k-bar-matches", matches);
+    provide("k-bar-state", state);
+    provide("k-bar-handler", handler);
+    provide("k-bar-matches", matches);
+    provide("k-bar-events", events);
   },
   render() {
-    return [h(InternalEvents), this.$slots.default!()];
+    return [this.$slots.default?.(), h(InternalEvents)];
   },
-})
+});

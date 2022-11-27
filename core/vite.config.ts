@@ -17,8 +17,10 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'vue-comd-k',
-      fileName: 'index',
+      fileName: (format) => `index.${format}.js`,
     },
+    emptyOutDir: true,
+    sourcemap: true,
     rollupOptions: {
       external: ['vue'],
       output: {

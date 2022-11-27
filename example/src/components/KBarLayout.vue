@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { KBarProvider, KBarPortal, KBarPositioner, KBarAnimator, KBarSearch } from 'vue-comd-k/src'
+import { KBarProvider, KBarPortal, KBarPositioner, KBarAnimator, KBarSearch } from 'vue-comd-k'
 </script>
 
 <template>
