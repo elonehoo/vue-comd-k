@@ -1,18 +1,18 @@
 import { defineComponent, provide, h, PropType, watch, computed } from 'vue'
-import { Action, KBarOptions } from '../types'
+import { Action, ComdKOptions } from '../types'
 import { InternalEvents } from '../InternalEvents'
 import { useInternalState } from '../composables'
 
-export const DEFAULT_OPTIONS: KBarOptions = {
+export const DEFAULT_OPTIONS: ComdKOptions = {
   placeholder: "Type a command or search…",
   disabled: false,
 };
 
 export default defineComponent({
-  name: "KBarProvider",
+  name: "ComdKProvider",
   props: {
     options: {
-      type: Object as PropType<Partial<KBarOptions>>,
+      type: Object as PropType<Partial<ComdKOptions>>,
       default: () => DEFAULT_OPTIONS,
     },
     actions: {

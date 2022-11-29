@@ -4,7 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import { useRouter } from 'vitepress'
 import slug from 'slug'
 import { storeToRefs } from 'pinia'
-import { KBarProvider, KBarPortal, KBarPositioner, KBarAnimator, KBarSearch, defineAction } from 'vue-comd-k'
+import { ComdKProvider, ComdKPortal, ComdKPositioner, ComdKAnimator, ComdKSearch, defineAction } from 'vue-comd-k'
 import { useStore } from '../store'
 import RenderResults from './RenderResults.vue'
 import DarkModeButton from './DarkModeButton.vue'
@@ -17,7 +17,7 @@ const router = useRouter();
 const docActions = getMainSidebar().flatMap((category) =>
   category.children.map((page) =>
     defineAction({
-      id: `kbar.documentation.${slug(page.text)}`,
+      id: `ComdK.documentation.${slug(page.text)}`,
       name: page.text,
       section: "Documentation",
       perform: () => router.go(page.link),
@@ -26,7 +26,7 @@ const docActions = getMainSidebar().flatMap((category) =>
 );
 const initialActions = [
   defineAction({
-    id: "kbar.navigation.github",
+    id: "ComdK.navigation.github",
     name: "GitHub",
     shortcut: ["g", "h"],
     keywords: "sourcecode",
@@ -49,11 +49,11 @@ const compareAction = (a, b) => {
 };
 
 const ACTION_RANKINGS = [
-  "kbar.debug.",
-  "kbar.example.",
-  "kbar.navigation.",
-  "kbar.documentation.",
-  "kbar.preferences.",
+  "ComdK.debug.",
+  "ComdK.example.",
+  "ComdK.navigation.",
+  "ComdK.documentation.",
+  "ComdK.preferences.",
 ];
 
 function getActionRankingById(action) {
@@ -67,13 +67,13 @@ function getActionRankingById(action) {
 </script>
 
 <template>
-  <KBarProvider
+  <ComdKProvider
     :actions="initialActions"
     :options="{ disabled, compare: compareAction }"
   >
-    <KBarPortal>
-      <KBarPositioner  style="z-index: 1000;">
-        <KBarAnimator
+    <ComdKPortal>
+      <ComdKPositioner  style="z-index: 1000;">
+        <ComdKAnimator
           style="
             max-width: calc(75 * var(--unit));
             width: 100%;
@@ -84,7 +84,7 @@ function getActionRankingById(action) {
             box-shadow: var(--shadow);
           "
         >
-          <KBarSearch
+          <ComdKSearch
             style="
               padding: calc(2 * var(--unit)) calc(2 * var(--unit));
               font-size: calc(2 * var(--unit));
@@ -97,13 +97,13 @@ function getActionRankingById(action) {
             "
           />
           <RenderResults />
-        </KBarAnimator>
-      </KBarPositioner>
-    </KBarPortal>
+        </ComdKAnimator>
+      </ComdKPositioner>
+    </ComdKPortal>
 
     <Layout>
     </Layout>
-  </KBarProvider>
+  </ComdKProvider>
 </template>
 
 <style scoped>

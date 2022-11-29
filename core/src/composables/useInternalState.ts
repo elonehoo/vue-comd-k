@@ -1,12 +1,12 @@
 import { Ref, ref, watch, watchEffect } from 'vue'
-import { ActionImpl, KBarEventsMap, KBarOptions } from '../'
+import { ActionImpl, ComdKEventsMap, ComdKOptions } from '../'
 import { ActionManager } from '../action'
 import { EventEmitter } from '../EventEmitter'
-import { Action, ActionId, KBarHandler, KBarState, VisualState, UpdateCallback } from '../types'
+import { Action, ActionId, ComdKHandler, ComdKState, VisualState, UpdateCallback } from '../types'
 import { useInternalMatches } from './useInternalMatches'
 
-export function useInternalState(options: KBarOptions, actions: Ref<Action[]>) {
-  const state = ref<KBarState>({
+export function useInternalState(options: ComdKOptions, actions: Ref<Action[]>) {
+  const state = ref<ComdKState>({
     options,
     search: "",
     actions: [],
@@ -14,10 +14,10 @@ export function useInternalState(options: KBarOptions, actions: Ref<Action[]>) {
     activeIndex: 0,
     visibility: "hidden",
   });
-  const events = ref(new EventEmitter<KBarEventsMap>());
+  const events = ref(new EventEmitter<ComdKEventsMap>());
   const actionManager = new ActionManager();
 
-  const setOptions = (options: KBarOptions) => {
+  const setOptions = (options: ComdKOptions) => {
     state.value.options = options;
   };
   const setSearch = (search: string): void => {
@@ -112,7 +112,7 @@ export function useInternalState(options: KBarOptions, actions: Ref<Action[]>) {
     }
   });
 
-  const handler = ref<KBarHandler>({
+  const handler = ref<ComdKHandler>({
     setOptions,
     setSearch,
     setCurrentRootAction,

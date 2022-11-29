@@ -1,10 +1,10 @@
 import { computed, Ref, ref, watchEffect } from 'vue'
-import { ActionImpl, KBarState, KBarMatches, CompareFn } from '../types'
+import { ActionImpl, ComdKState, ComdKMatches, CompareFn } from '../types'
 import { useThrottle } from '@vueuse/core'
 import { matchSorter } from 'match-sorter'
 
-export function useInternalMatches(state: Ref<KBarState>) {
-  const matches = ref<KBarMatches>({
+export function useInternalMatches(state: Ref<ComdKState>) {
+  const matches = ref<ComdKMatches>({
     results: [],
     rootActionId: null,
   });
@@ -63,7 +63,7 @@ export function useInternalMatches(state: Ref<KBarState>) {
   return matches;
 }
 
-function groupMatches(results: ActionImpl[]): KBarMatches["results"] {
+function groupMatches(results: ActionImpl[]): ComdKMatches["results"] {
   const map: Record<string, ActionImpl[]> = {};
   for (let i = 0; i < results.length; i++) {
     const action = results[i];
@@ -72,7 +72,7 @@ function groupMatches(results: ActionImpl[]): KBarMatches["results"] {
     map[section].push(action);
   }
 
-  const grouped: KBarMatches["results"] = [];
+  const grouped: ComdKMatches["results"] = [];
   Object.keys(map).forEach((section) => {
     if (section) grouped.push(section);
     const actions = map[section];

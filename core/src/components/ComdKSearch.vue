@@ -1,15 +1,15 @@
 <script lang="ts">
 import { computed, defineComponent, ref, watch, watchEffect } from 'vue'
-import { useKBarState, useKBarHandler } from '../composables'
+import { useComdKState, useComdKHandler } from '../composables'
 
 export default defineComponent({
-  name: "KBarSearch",
+  name: "ComdKSearch",
   emits: {
     input: (e: InputEvent) => true,
   },
   setup(props, { emit }) {
-    const state = useKBarState();
-    const handler = useKBarHandler();
+    const state = useComdKState();
+    const handler = useComdKHandler();
     const inputRef = ref<HTMLInputElement | null>(null);
     const maybeFocus = () => {
       if (state.value.visibility === "visible") {
@@ -30,7 +30,7 @@ export default defineComponent({
         !!state.value.currentRootActionId
       ) {
         const current = state.value.actions.find(
-          (act) => act.id === state.value.currentRootActionId
+          (act:any) => act.id === state.value.currentRootActionId
         );
         if (current) {
           handler.value.setCurrentRootAction(current.parent);
@@ -40,7 +40,7 @@ export default defineComponent({
     const placeholder = computed(() => {
       if (state.value.currentRootActionId) {
         const action = state.value.actions.find(
-          (act) => act.id === state.value.currentRootActionId
+          (act:any) => act.id === state.value.currentRootActionId
         );
         if (action) return action.name;
       }

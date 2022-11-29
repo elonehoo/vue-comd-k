@@ -1,24 +1,24 @@
-import { useKBar } from './useKBar'
-import { useKBarHandler } from './useKBarHandler'
-import { useKBarMatches } from './useKBarMatches'
-import { useKBarState } from './useKBarState'
+import { useComdK } from './useComdK'
+import { useComdKHandler } from './useComdKHandler'
+import { useComdKMatches } from './useComdKMatches'
+import { useComdKState } from './useComdKState'
 import { useInternalMatches } from './useInternalMatches'
 import { useInternalState } from './useInternalState'
 import { useRegisterActions } from './useRegisterActions'
-import { useKBarEvents, useKBarEvent, useKBarEventOnce } from './useKBarEvents'
+import { useComdKEvents, useComdKEvent, useComdKEventOnce } from './useComdKEvents'
 import { UseVirtualListOptions, UseVirtualListItem, useVirtualList } from './useVirtualList'
 
 export {
-  useKBar,
-  useKBarHandler,
-  useKBarState,
-  useKBarMatches,
+  useComdK,
+  useComdKHandler,
+  useComdKState,
+  useComdKMatches,
   useInternalMatches,
   useInternalState,
   useRegisterActions,
-  useKBarEvents,
-  useKBarEvent,
-  useKBarEventOnce,
+  useComdKEvents,
+  useComdKEvent,
+  useComdKEventOnce,
   UseVirtualListOptions,
   UseVirtualListItem,
   useVirtualList

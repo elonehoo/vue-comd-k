@@ -1,6 +1,6 @@
 import { onUnmounted, ref, shallowRef, watchEffect } from 'vue'
 import { Action, MaybeRef } from '../types'
-import { useKBarHandler } from './useKBarHandler'
+import { useComdKHandler } from './useComdKHandler'
 
 export function useRegisterActions(
   actions: MaybeRef<Action[]>,
@@ -8,7 +8,7 @@ export function useRegisterActions(
 ): () => void {
   const source = shallowRef(actions);
   const unregister = ref<() => void>();
-  const handler = useKBarHandler();
+  const handler = useComdKHandler();
   watchEffect(() => {
     unregister.value?.();
 

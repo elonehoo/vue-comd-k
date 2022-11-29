@@ -30,8 +30,8 @@ export type ActionTree = ActionImpl[];
 
 export type VisualState = "entering" | "visible" | "leaving" | "hidden";
 
-export interface KBarState {
-  options: KBarOptions;
+export interface ComdKState {
+  options: ComdKOptions;
   search: string;
   actions: ActionTree;
   // used when dived into action groups
@@ -42,8 +42,8 @@ export interface KBarState {
 
 export type UpdateCallback<T> = (curr: T) => T;
 
-export interface KBarHandler {
-  setOptions: (options: KBarOptions) => void;
+export interface ComdKHandler {
+  setOptions: (options: ComdKOptions) => void;
   setSearch: (search: string) => void;
   // returns a function to unregister
   registerActions: (actions: Action[], prepend?: boolean) => () => void;
@@ -57,7 +57,7 @@ export interface KBarHandler {
   performAction: (action: ActionImpl) => void;
 }
 
-export interface KBarMatches {
+export interface ComdKMatches {
   // string for section title
   results: (string | ActionImpl)[];
   rootActionId: string | null | undefined;
@@ -73,13 +73,13 @@ export type CompareFn = (
   b: IndexedItem<ActionImpl>
 ) => number;
 
-export interface KBarOptions {
+export interface ComdKOptions {
   placeholder?: string;
   disabled?: boolean;
   compare?: CompareFn;
 }
 
-export type KBarEventsMap = {
+export type ComdKEventsMap = {
   open: undefined;
   close: undefined;
   queryChange: string;
@@ -87,4 +87,4 @@ export type KBarEventsMap = {
   performAction: ActionImpl;
 };
 
-export type KBarEvents = EventEmitter<KBarEventsMap>;
+export type ComdKEvents = EventEmitter<ComdKEventsMap>;

@@ -1,10 +1,10 @@
-import KBarProvider from "./components/KBarProvider";
-import KBarPortal from "./components/KBarPortal.vue";
-import KBarPositioner from "./components/KBarPositioner.vue";
-import KBarAnimator from "./components/KBarAnimator.vue";
-import KBarSearch from "./components/KBarSearch.vue";
-import KBarResults from "./components/KBarResults.vue";
-import { useKBarState, useKBarHandler, useKBarMatches, useKBar, useRegisterActions, useKBarEvents, useKBarEvent, useKBarEventOnce } from "./composables";
+import ComdKProvider from "./components/ComdKProvider";
+import ComdKPortal from "./components/ComdKPortal.vue";
+import ComdKPositioner from "./components/ComdKPositioner.vue";
+import ComdKAnimator from "./components/ComdKAnimator.vue";
+import ComdKSearch from "./components/ComdKSearch.vue";
+import ComdKResults from "./components/ComdKResults.vue";
+import { useComdKState, useComdKHandler, useComdKMatches, useComdK, useRegisterActions, useComdKEvents, useComdKEvent, useComdKEventOnce } from "./composables";
 import { defineAction } from "./action";
 
 // for legacy compatibility
@@ -12,20 +12,20 @@ const createAction = defineAction;
 
 export * from "./types";
 export {
-  KBarProvider,
-  KBarPortal,
-  KBarPositioner,
-  KBarAnimator,
-  KBarSearch,
-  KBarResults,
-  useKBarState,
-  useKBarHandler,
-  useKBarMatches,
-  useKBar,
+  ComdKProvider,
+  ComdKPortal,
+  ComdKPositioner,
+  ComdKAnimator,
+  ComdKSearch,
+  ComdKResults,
+  useComdKState,
+  useComdKHandler,
+  useComdKMatches,
+  useComdK,
   useRegisterActions,
-  useKBarEvents,
-  useKBarEvent,
-  useKBarEventOnce,
+  useComdKEvents,
+  useComdKEvent,
+  useComdKEventOnce,
   defineAction,
   createAction,
 };

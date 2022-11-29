@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { useEventListener } from '@vueuse/core'
 import { Ref, ref, watchEffect } from 'vue'
-import { useKBarHandler,useKBarState } from '../composables'
+import { useComdKHandler,useComdKState } from '../composables'
 
-const state = useKBarState()
-const handler = useKBarHandler()
+const state = useComdKState()
+const handler = useComdKHandler()
 
 watchEffect(() => {
   const { visibility } = state.value;
@@ -40,13 +40,13 @@ function useClickOutside(
 </script>
 
 <template>
-  <div ref="outerRef" class="k-bar-animator pointer-auto">
+  <div ref="outerRef" class="comd-k--animator comd-k-pointer-auto">
     <slot />
   </div>
 </template>
 
 <style scoped>
-.pointer-auto{
+.comd-k-pointer-auto{
   pointer-events: auto;
 }
 </style>

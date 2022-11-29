@@ -2,13 +2,13 @@
 </script>
 
 <template>
-    <div class="vue-comd-k-positioner">
+    <div class="comd-k-positioner">
     <slot />
   </div>
 </template>
 
 <style scoped>
-.vue-comd-k-positioner{
+.comd-k-positioner{
   position: fixed;
   display: flex;
   align-items: flex-start;

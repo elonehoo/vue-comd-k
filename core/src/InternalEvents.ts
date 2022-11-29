@@ -1,9 +1,9 @@
 import { useEventListener } from '@vueuse/core'
 import { defineComponent, onMounted, ref, watch, watchEffect } from 'vue'
-import { useKBarHandler, useKBarState } from "./composables"
+import { useComdKHandler, useComdKState } from "./composables"
 
 export const InternalEvents = defineComponent({
-  name: "KBarInternalEvents",
+  name: "ComdKInternalEvents",
   setup() {
     onMounted(() => {
       useToggleHandler();
@@ -18,8 +18,8 @@ export const InternalEvents = defineComponent({
 });
 
 function useToggleHandler() {
-  const state = useKBarState();
-  const handler = useKBarHandler();
+  const state = useComdKState();
+  const handler = useComdKHandler();
 
   useEventListener("keydown", (e) => {
     if (state.value.options.disabled) {
@@ -59,7 +59,7 @@ function useToggleHandler() {
 }
 
 function useFocusHandler() {
-  const state = useKBarState();
+  const state = useComdKState();
 
   const activeElement = ref<HTMLElement | null>(null);
 
@@ -80,10 +80,10 @@ function useFocusHandler() {
 
 /**
  * `useDocumentLock` is a simple implementation for preventing the
- * underlying page content from scrolling when kbar is open.
+ * underlying page content from scrolling when ComdK is open.
  */
 function useDocumentLock() {
-  const state = useKBarState();
+  const state = useComdKState();
 
   watchEffect(() => {
     const { visibility } = state.value;
@@ -102,8 +102,8 @@ function useDocumentLock() {
  * performs actions for patterns that match the user defined `shortcut`.
  */
 function useShortcuts() {
-  const state = useKBarState();
-  const handler = useKBarHandler();
+  const state = useComdKState();
+  const handler = useComdKHandler();
 
   const buffer: string[] = [];
   let lastKeyStrokeTime = 0;
@@ -130,7 +130,7 @@ function useShortcuts() {
     const bufferString = buffer.join("");
 
     const { actions } = state.value;
-    const action = actions.find((action) => {
+    const action = actions.find((action:any) => {
       if (!action.shortcut || action.shortcut.length === 0) {
         return false;
       }

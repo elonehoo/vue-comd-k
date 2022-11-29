@@ -2,7 +2,7 @@
 import { useEventListener } from '@vueuse/core'
 import { computed, defineComponent, onMounted, PropType, ref, watch, watchEffect } from 'vue'
 import { ActionImpl } from '../types'
-import { useKBarHandler, useKBarState, useVirtualList } from '../composables'
+import { useComdKHandler, useComdKState, useVirtualList } from '../composables'
 
 export type RenderParams = {
   item: ActionImpl | string;
@@ -11,7 +11,7 @@ export type RenderParams = {
 };
 export type ItemHeightCalculator = (item: RenderParams) => number;
 export default defineComponent({
-  name: "KBarResults",
+  name: "ComdKResults",
   props: {
     items: {
       type: Array as PropType<(ActionImpl | string)[]>,
@@ -23,8 +23,8 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const state = useKBarState();
-    const handler = useKBarHandler();
+    const state = useComdKState();
+    const handler = useComdKHandler();
     const items = computed(() => props.items);
     const { list, containerProps, wrapperProps, scrollIntoView } =
       useVirtualList(items, {
@@ -134,8 +134,8 @@ function usePointerMovedSinceMount() {
 </script>
 
 <template>
-  <div class="k-bar-results-container" v-bind="containerProps">
-    <div class="k-bar-results-wrapper" v-bind="wrapperProps">
+  <div class="comd-k-results-container" v-bind="containerProps">
+    <div class="comd-k--results-wrapper" v-bind="wrapperProps">
       <div
         v-for="{ data, index } in list"
         :key="index"

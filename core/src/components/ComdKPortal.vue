@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useMounted } from '@vueuse/core'
 import { computed } from 'vue'
-import { useKBarState } from '../composables'
+import { useComdKState } from '../composables'
 
-const state = useKBarState();
+const state = useComdKState();
 const mounted = useMounted();
 const visible = computed(() => state.value.visibility !== "hidden");
 

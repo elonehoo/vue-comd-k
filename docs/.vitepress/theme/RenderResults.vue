@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useKBarMatches, KBarResults } from 'vue-comd-k'
+import { useComdKMatches, ComdKResults } from 'vue-comd-k'
 
-const matches = useKBarMatches();
+const matches = useComdKMatches();
 const itemHeight = (params: { item: any; index: number }) => {
   if (typeof params.item === "string") return 32;
   return 60;
@@ -10,7 +10,7 @@ const itemHeight = (params: { item: any; index: number }) => {
 </script>
 
 <template>
-  <KBarResults
+  <ComdKResults
     :items="matches.results"
     :item-height="itemHeight"
     :style="{ 'max-height': '300px', overflow: 'auto' }"
@@ -35,7 +35,7 @@ const itemHeight = (params: { item: any; index: number }) => {
         </div>
       </div>
     </template>
-  </KBarResults>
+  </ComdKResults>
 </template>
 
 <style scoped>
