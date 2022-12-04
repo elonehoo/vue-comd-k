@@ -5,7 +5,7 @@
   "description": "Extensible command+k interface for Vue.",
   "scripts": {
     "build": "pnpm -C core run build",
-    "docs:dev":"pnpm -C docs run dev",
+    "docs:dev": "pnpm -C docs run dev",
     "example:dev": "pnpm -C example run dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
@@ -20,8 +20,8 @@
   "devDependencies": {
     "@elonehoo/eslint-config": "^2.0.0",
     "bumpp": "^8.2.1",
-    "eslint": "^8.28.0",
-    "pnpm": "^7.17.0",
+    "eslint": "^8.29.0",
+    "pnpm": "^7.18.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.9.3",
     "vite": "^3.2.4"

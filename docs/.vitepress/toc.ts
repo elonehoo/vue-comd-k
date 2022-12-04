@@ -3,7 +3,7 @@ export function getMainSidebar() {
     {
       text: "Introduction",
       children: [
-        { text: "What is vue-kbar", link: "/" },
+        { text: "What is vue-comd-k", link: "/" },
         { text: "Getting started", link: "/intro/getting-started.html" },
       ],
     },
