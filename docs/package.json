@@ -5,8 +5,7 @@
   "description": "Extensible command+k interface for Vue.",
   "scripts": {
     "dev": "vitepress --port 3333 --open",
-    "build": "vite build",
-    "preview": "vite preview --port 8766 --open"
+    "build": "vitepress build"
   },
   "keywords": [
     "command",
