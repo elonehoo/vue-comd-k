@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineComponent, ref, watchEffect } from 'vue'
+import { ref } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import { useRouter } from 'vitepress'
 import slug from 'slug'
@@ -8,23 +8,15 @@ import { ComdKProvider, ComdKPortal, ComdKPositioner, ComdKAnimator, ComdKSearch
 import { useStore } from '../store'
 import RenderResults from './RenderResults.vue'
 import DarkModeButton from './DarkModeButton.vue'
-import { getMainSidebar } from '../toc'
+import { useDark, useToggle } from '@vueuse/core'
 
 const { Layout } = DefaultTheme;
 
 const store = useStore();
-const router = useRouter();
-const docActions = getMainSidebar().flatMap((category) =>
-  category.children.map((page) =>
-    defineAction({
-      id: `ComdK.documentation.${slug(page.text)}`,
-      name: page.text,
-      section: "Documentation",
-      perform: () => router.go(page.link),
-    })
-  )
-);
-const initialActions = [
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+
+const initialActions = ref([
   defineAction({
     id: "ComdK.navigation.github",
     name: "GitHub",
@@ -34,10 +26,19 @@ const initialActions = [
     perform: () => {
       window.open("https://github.com/elonehoo/vue-comd-k", "_blank")
     }
-
   }),
-  ...docActions,
-];
+  defineAction({
+    id:'ComdK.theme.dark',
+    name:'Dark / Light',
+    shortcut: ["d", "l"],
+    keywords: "sourcecode",
+    section:'theme',
+    perform:()=>{
+      toggleDark()
+    }
+  }),
+]);
+
 const { disabled } = storeToRefs(store);
 const compareAction = (a, b) => {
   const ar = getActionRankingById(a.item);
@@ -105,9 +106,3 @@ function getActionRankingById(action) {
     </Layout>
   </ComdKProvider>
 </template>
-
-<style scoped>
-.display{
-  display: flex;
-}
-</style>
