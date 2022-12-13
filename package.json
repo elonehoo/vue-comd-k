@@ -6,6 +6,7 @@
   "scripts": {
     "build": "pnpm -C core run build",
     "docs:dev": "pnpm -C docs run dev",
+    "docs:build":"pnpm -C docs run build",
     "example:dev": "pnpm -C example run dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
