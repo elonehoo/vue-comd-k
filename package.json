@@ -9,7 +9,8 @@
     "docs:build":"pnpm -C docs run build",
     "example:dev": "pnpm -C example run dev",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "release": "bumpp package.json core/package.json --commit --push --tag && pnpm -r publish --access public"
   },
   "keywords": [
     "command",
