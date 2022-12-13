@@ -1,6 +1,6 @@
 {
   "name": "vue-comd-k",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.0",
   "type": "module",
   "description": "Extensible command+k interface for Vue.",
   "module": "dist/index.es.js",
