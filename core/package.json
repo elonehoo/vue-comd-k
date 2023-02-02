@@ -14,7 +14,7 @@
     "build:clean": "rimraf ./dist ./dist_types",
     "build:type": "vue-tsc --declaration --emitDeclarationOnly",
     "build:dev": "vite build",
-    "build": "pnpm run build:clean && pnpm run build:type && pnpm run build:dev"
+    "build": "pnpm run build:clean && pnpm run build:dev"
   },
   "keywords": [
     "command",
