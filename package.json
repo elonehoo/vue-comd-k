@@ -21,7 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "@elonehoo/eslint-config": "^2.0.0",
-    "bumpp": "^8.2.1",
+    "bumpp": "^9.1.0",
     "eslint": "^8.38.0",
     "pnpm": "^7.32.0",
     "rimraf": "^4.4.1",
