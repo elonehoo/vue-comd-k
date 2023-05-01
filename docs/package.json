@@ -15,10 +15,10 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
   "dependencies": {
-    "@vueuse/core": "^10.0.2",
-    "pinia": "^2.0.34",
+    "@vueuse/core": "^10.1.0",
+    "pinia": "^2.0.35",
     "slug": "^8.2.2",
-    "vitepress": "1.0.0-alpha.71",
+    "vitepress": "1.0.0-alpha.75",
     "vue-comd-k": "workspace:*"
   }
 }
