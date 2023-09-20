@@ -1,6 +1,7 @@
 {
   "name": "@vue-comd-k/docs",
   "version": "0.0.0",
+  "type": "module",
   "private": "true",
   "description": "Extensible command+k interface for Vue.",
   "scripts": {
@@ -15,10 +16,10 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
   "dependencies": {
-    "@vueuse/core": "^10.3.0",
+    "@vueuse/core": "^10.4.1",
     "pinia": "^2.1.6",
     "slug": "^8.2.3",
-    "vitepress": "1.0.0-beta.7",
+    "vitepress": "1.0.0-rc.14",
     "vue-comd-k": "workspace:*"
   }
 }
