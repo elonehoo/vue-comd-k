@@ -21,12 +21,12 @@
   "license": "MIT",
   "devDependencies": {
     "@elonehoo/eslint-config": "^2.0.0",
-    "bumpp": "^9.1.1",
-    "eslint": "^8.46.0",
-    "pnpm": "^8.6.12",
+    "bumpp": "^9.2.0",
+    "eslint": "^8.49.0",
+    "pnpm": "^8.7.6",
     "rimraf": "^5.0.1",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.8"
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
   },
   "dependencies": {
     "vue": "^3.3.4"
