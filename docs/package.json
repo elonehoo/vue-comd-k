@@ -16,7 +16,7 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
   "dependencies": {
-    "@vueuse/core": "^10.4.1",
+    "@vueuse/core": "^10.5.0",
     "pinia": "^2.1.6",
     "slug": "^8.2.3",
     "vitepress": "1.0.0-rc.20",
