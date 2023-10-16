@@ -17,9 +17,9 @@
   "license": "MIT",
   "dependencies": {
     "@vueuse/core": "^10.5.0",
-    "pinia": "^2.1.6",
+    "pinia": "^2.1.7",
     "slug": "^8.2.3",
-    "vitepress": "1.0.0-rc.20",
+    "vitepress": "1.0.0-rc.22",
     "vue-comd-k": "workspace:*"
   }
 }
