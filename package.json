@@ -22,8 +22,8 @@
   "devDependencies": {
     "@elonehoo/eslint-config": "^2.0.0",
     "bumpp": "^9.2.0",
-    "eslint": "^8.53.0",
-    "pnpm": "^8.10.3",
+    "eslint": "^8.54.0",
+    "pnpm": "^8.10.5",
     "rimraf": "^5.0.5",
     "typescript": "^5.2.2",
     "vite": "^4.5.0"
