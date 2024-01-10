@@ -59,8 +59,8 @@ importers:
         specifier: ^20.10.7
         version: 20.10.7
       '@vitejs/plugin-vue':
-        specifier: ^4.6.2
-        version: 4.6.2(vite@5.0.11)(vue@3.4.5)
+        specifier: ^5.0.2
+        version: 5.0.2(vite@5.0.11)(vue@3.4.5)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -95,8 +95,8 @@ importers:
         specifier: ^0.0.16
         version: 0.0.16(typescript@5.3.3)
       '@vitejs/plugin-vue':
-        specifier: ^4.6.2
-        version: 4.6.2(vite@5.0.11)(vue@3.4.5)
+        specifier: ^5.0.2
+        version: 5.0.2(vite@5.0.11)(vue@3.4.5)
       vite:
         specifier: ^5.0.11
         version: 5.0.11(@types/node@20.10.7)
@@ -1229,16 +1229,6 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@vitejs/plugin-vue@4.6.2(vite@5.0.11)(vue@3.4.5):
-    resolution: {integrity: sha512-kqf7SGFoG+80aZG6Pf+gsZIVvGSCKE98JbiWqcCV9cThtg91Jav0yvYFC9Zb+jKetNGF6ZKeoaxgZfND21fWKw==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    peerDependencies:
-      vite: ^4.0.0 || ^5.0.0
-      vue: ^3.2.25
-    dependencies:
-      vite: 5.0.11(@types/node@20.10.7)
-      vue: 3.4.5(typescript@5.3.3)
-
   /@vitejs/plugin-vue@5.0.2(vite@5.0.11)(vue@3.4.5):
     resolution: {integrity: sha512-kEjJHrLb5ePBvjD0SPZwJlw1QTRcjjCA9sB5VyfonoXVBxTS7TMnqL6EkLt1Eu61RDeiuZ/WN9Hf6PxXhPI2uA==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -1248,7 +1238,6 @@ packages:
     dependencies:
       vite: 5.0.11(@types/node@20.10.7)
       vue: 3.4.5(typescript@5.3.3)
-    dev: false
 
   /@vitest/expect@0.30.1:
     resolution: {integrity: sha512-c3kbEtN8XXJSeN81iDGq29bUzSjQhjES2WR3aColsS4lPGbivwLtas4DNUe0jD9gg/FYGIteqOenfU95EFituw==}
