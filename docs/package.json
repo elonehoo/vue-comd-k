@@ -16,10 +16,10 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
   "dependencies": {
-    "@vueuse/core": "^10.7.2",
+    "@vueuse/core": "^10.8.0",
     "pinia": "^2.1.7",
     "slug": "^8.2.3",
-    "vitepress": "1.0.0-rc.42",
+    "vitepress": "1.0.0-rc.44",
     "vue-comd-k": "workspace:*"
   }
 }
