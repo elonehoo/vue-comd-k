@@ -19,7 +19,7 @@
     "@vueuse/core": "^10.9.0",
     "pinia": "^2.1.7",
     "slug": "^8.2.3",
-    "vitepress": "1.0.0-rc.45",
+    "vitepress": "1.0.1",
     "vue-comd-k": "workspace:*"
   }
 }
