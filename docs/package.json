@@ -18,7 +18,7 @@
   "dependencies": {
     "@vueuse/core": "^10.10.0",
     "pinia": "^2.1.7",
-    "slug": "^8.2.3",
+    "slug": "^9.1.0",
     "vitepress": "1.2.3",
     "vue-comd-k": "workspace:*"
   }
