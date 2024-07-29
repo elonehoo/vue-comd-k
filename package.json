@@ -25,10 +25,10 @@
     "eslint": "^8.57.0",
     "pnpm": "^8.15.9",
     "rimraf": "^5.0.9",
-    "typescript": "^5.5.3",
-    "vite": "^5.3.4"
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5"
   },
   "dependencies": {
-    "vue": "^3.4.33"
+    "vue": "^3.4.34"
   }
 }
