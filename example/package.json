@@ -18,9 +18,9 @@
   "dependencies": {
     "@elonehoo/keyboard": "^0.0.8",
     "@elonehoo/vue-mac-keyboard": "^0.0.16",
-    "@vitejs/plugin-vue": "^5.1.1",
+    "@vitejs/plugin-vue": "^5.1.2",
     "vite": "^5.3.5",
-    "vue": "^3.4.34",
+    "vue": "^3.4.35",
     "vue-comd-k": "workspace:*"
   }
 }
