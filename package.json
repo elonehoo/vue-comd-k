@@ -22,7 +22,7 @@
   "devDependencies": {
     "@elonehoo/eslint-config": "^2.0.0",
     "bumpp": "^9.4.2",
-    "eslint": "^8.57.0",
+    "eslint": "^9.9.0",
     "pnpm": "^8.15.9",
     "rimraf": "^5.0.10",
     "typescript": "^5.5.4",
