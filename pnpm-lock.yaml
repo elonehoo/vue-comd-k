@@ -77,8 +77,8 @@ importers:
         specifier: ^2.2.1
         version: 2.2.1(typescript@5.5.4)(vue@3.4.37)
       slug:
-        specifier: ^8.2.3
-        version: 8.2.3
+        specifier: ^9.1.0
+        version: 9.1.0
       vitepress:
         specifier: 1.3.2
         version: 1.3.2(@algolia/client-search@4.20.0)(search-insights@2.6.0)(typescript@5.5.4)
@@ -4139,8 +4139,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /slug@8.2.3:
-    resolution: {integrity: sha512-fXjhAZszNecz855GUNIwW0+sFPi9WV4bMiEKDOCA4wcq1ts1UnUVNy/F78B0Aat7/W3rA+se//33ILKNMrbeYQ==}
+  /slug@9.1.0:
+    resolution: {integrity: sha512-ioOsCfzQSu+D6NZ8XMCR8IW9FgvF8W7Xzz56hBkB/ALvNaWeBs2MUvvPugq3GCrxfHPFeK6hAxGkY/WLnfX2Lg==}
     hasBin: true
     dev: false
 
