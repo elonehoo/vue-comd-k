@@ -77,8 +77,8 @@ importers:
         specifier: ^2.2.6
         version: 2.2.6(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))
       slug:
-        specifier: ^9.1.0
-        version: 9.1.0
+        specifier: ^10.0.0
+        version: 10.0.0
       vitepress:
         specifier: 1.4.5
         version: 1.4.5(@algolia/client-search@5.0.0)(@types/node@22.8.7)(postcss@8.4.47)(search-insights@2.16.3)(typescript@5.6.3)
@@ -2367,8 +2367,8 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  slug@9.1.0:
-    resolution: {integrity: sha512-ioOsCfzQSu+D6NZ8XMCR8IW9FgvF8W7Xzz56hBkB/ALvNaWeBs2MUvvPugq3GCrxfHPFeK6hAxGkY/WLnfX2Lg==}
+  slug@10.0.0:
+    resolution: {integrity: sha512-M8s2PWOUeSCdD4S1NH5lCzXg2zFV1fozrtfr0FSKl65x+EF1rUowj+/vyFlnHgxPxWzT+DL0VXKfYc1DHJoymg==}
     hasBin: true
 
   source-map-js@1.2.1:
@@ -5348,7 +5348,7 @@ snapshots:
 
   slash@3.0.0: {}
 
-  slug@9.1.0: {}
+  slug@10.0.0: {}
 
   source-map-js@1.2.1: {}
 
