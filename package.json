@@ -21,11 +21,11 @@
   "license": "MIT",
   "devDependencies": {
     "@elonehoo/eslint-config": "^2.0.0",
-    "bumpp": "^9.9.2",
-    "eslint": "^9.17.0",
+    "bumpp": "^9.10.0",
+    "eslint": "^9.18.0",
     "pnpm": "^9.15.3",
     "rimraf": "^6.0.1",
-    "typescript": "^5.7.2",
+    "typescript": "^5.7.3",
     "vite": "^6.0.7"
   },
   "dependencies": {
