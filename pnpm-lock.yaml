@@ -22,8 +22,8 @@ importers:
         specifier: ^9.20.0
         version: 9.20.0(jiti@2.4.1)
       pnpm:
-        specifier: ^9.15.5
-        version: 9.15.5
+        specifier: ^10.4.0
+        version: 10.4.0
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -2423,8 +2423,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pnpm@9.15.5:
-    resolution: {integrity: sha512-hFGWAmqrHMPwmKBHS2TfurKv56G06R3YaJXY5Koyp6bQMEni0K13C75N4COnEi+2jBodbg0DPHB2CF+dXUgA1A==}
+  pnpm@10.4.0:
+    resolution: {integrity: sha512-a4SdB4fZf49OHwOpuP+PA4554VPW8RrlOa58Q1/555bfaoYsmRUCaVx/no+siur8GsWo2rR+NhSNGDgy2IbdUg==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -5558,7 +5558,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pnpm@9.15.5: {}
+  pnpm@10.4.0: {}
 
   possible-typed-array-names@1.0.0: {}
 
