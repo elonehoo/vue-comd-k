@@ -16,8 +16,8 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
   "dependencies": {
-    "@vueuse/core": "^13.0.0",
-    "pinia": "^3.0.1",
+    "@vueuse/core": "^13.1.0",
+    "pinia": "^3.0.2",
     "slug": "^10.0.0",
     "vitepress": "1.6.3",
     "vue-comd-k": "workspace:*"
