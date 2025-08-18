@@ -19,7 +19,7 @@
     "@elonehoo/keyboard": "^0.0.8",
     "@elonehoo/vue-mac-keyboard": "^0.0.16",
     "@vitejs/plugin-vue": "^5.2.4",
-    "vite": "^7.1.1",
+    "vite": "^7.1.2",
     "vue": "^3.5.18",
     "vue-comd-k": "workspace:*"
   }
