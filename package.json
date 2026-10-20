@@ -30,5 +30,8 @@
   },
   "dependencies": {
     "vue": "^3.5.19"
+  },
+  "engines": {
+    "node": "24.x"
   }
 }
