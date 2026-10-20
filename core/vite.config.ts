@@ -15,6 +15,8 @@ export default defineConfig({
     distCss()
   ],
   build: {
+    // Preserve the browser floor used by Vite 7.
+    target: ['chrome107', 'edge107', 'firefox104', 'safari16'],
     outDir: 'dist',
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
