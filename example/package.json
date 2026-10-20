@@ -2,6 +2,7 @@
   "name": "@vue-comd-k/examole",
   "version": "0.0.0",
   "private": "true",
+  "type": "module",
   "description": "Extensible command+k interface for Vue.",
   "scripts": {
     "dev": "vite --port 3333 --open",
@@ -19,7 +20,7 @@
     "@elonehoo/keyboard": "^0.0.8",
     "@elonehoo/vue-mac-keyboard": "^0.0.16",
     "@vitejs/plugin-vue": "^6.0.10",
-    "vite": "^7.3.7",
+    "vite": "^8.3.4",
     "vue": "^3.5.44",
     "vue-comd-k": "workspace:*"
   }

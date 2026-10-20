@@ -6,7 +6,7 @@ import { useInternalMatches } from './useInternalMatches'
 import { useInternalState } from './useInternalState'
 import { useRegisterActions } from './useRegisterActions'
 import { useComdKEvents, useComdKEvent, useComdKEventOnce } from './useComdKEvents'
-import { UseVirtualListOptions, UseVirtualListItem, useVirtualList } from './useVirtualList'
+import { useVirtualList, type UseVirtualListItem, type UseVirtualListOptions } from './useVirtualList'
 
 export {
   useComdK,
@@ -19,7 +19,7 @@ export {
   useComdKEvents,
   useComdKEvent,
   useComdKEventOnce,
-  UseVirtualListOptions,
-  UseVirtualListItem,
   useVirtualList
 }
+
+export type { UseVirtualListItem, UseVirtualListOptions }

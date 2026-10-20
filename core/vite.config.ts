@@ -1,4 +1,4 @@
-import * as path from 'path'
+import * as path from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import distCss from '@elonehoo/vite-plugin-dist-css'
@@ -7,7 +7,7 @@ import distCss from '@elonehoo/vite-plugin-dist-css'
 export default defineConfig({
   resolve: {
     alias: {
-      '~/': `${path.resolve(__dirname, 'src')}/`,
+      '~/': `${path.resolve(import.meta.dirname, 'src')}/`,
     },
   },
   plugins: [
@@ -17,7 +17,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: path.resolve(import.meta.dirname, 'src/index.ts'),
       name: 'vue-comd-k',
       fileName: (format) => `index.${format}.js`,
     },
