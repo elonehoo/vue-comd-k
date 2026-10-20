@@ -1,5 +1,21 @@
+# pnpm 12 only reads auth and registry settings from .npmrc.
+ignoreWorkspaceRootCheck: true
+# pnpm 12's default 24h minimumReleaseAge rejects a package published the
+# same day (ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION) when the lockfile is refreshed.
+minimumReleaseAge: 0
+minimumReleaseAgeExcludePrune: true
+autoInstallPeers: true
+strictPeerDependencies: false
+shellEmulator: true
+
 packages:
   - 'core'
   - 'test'
   - 'example'
   - 'docs'
+
+# pnpm 12 fails install when a dependency build script is not approved
+# (ERR_PNPM_IGNORED_BUILDS).
+allowBuilds:
+  esbuild: true
+  pnpm: true

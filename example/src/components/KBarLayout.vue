@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { KBarProvider, KBarPortal, KBarPositioner, KBarAnimator, KBarSearch } from 'vue-comd-k'
+import { ComdKAnimator, ComdKPortal, ComdKPositioner, ComdKProvider, ComdKSearch } from 'vue-comd-k'
 </script>
 
 <template>
-  <KBarProvider>
-    <KBarPortal>
-      <KBarPositioner>
-        <KBarAnimator>
-          <KBarSearch />
-        </KBarAnimator>
-      </KBarPositioner>
-    </KBarPortal>
-  </KBarProvider>
+  <ComdKProvider>
+    <ComdKPortal>
+      <ComdKPositioner>
+        <ComdKAnimator>
+          <ComdKSearch />
+        </ComdKAnimator>
+      </ComdKPositioner>
+    </ComdKPortal>
+  </ComdKProvider>
 </template>

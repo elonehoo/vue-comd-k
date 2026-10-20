@@ -1,5 +1,5 @@
-import { watch, Ref, ref, computed, shallowRef, CSSProperties } from 'vue'
-import { useElementSize, MaybeRef } from '@vueuse/core'
+import { watch, Ref, ref, computed, shallowRef, CSSProperties, type MaybeRef } from 'vue'
+import { useElementSize } from '@vueuse/core'
 
 export interface UseVirtualListOptions {
   /**
