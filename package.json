@@ -2,7 +2,7 @@
   "name": "@vue-comd-k/monorepo",
   "version": "0.0.3",
   "private": "true",
-  "packageManager": "pnpm@12.14.0",
+  "packageManager": "pnpm@12.16.1",
   "description": "Extensible command+k interface for Vue.",
   "scripts": {
     "build": "pnpm -C core run build",
@@ -23,16 +23,16 @@
   "devDependencies": {
     "@elonehoo/eslint-config": "^2.0.0",
     "bumpp": "^12.3.0",
-    "eslint": "^10.13.0",
-    "pnpm": "12.14.0",
+    "eslint": "^10.14.0",
+    "pnpm": "12.16.1",
     "rimraf": "^6.1.3",
     "typescript": "^5.9.3",
-    "vite": "^8.3.4"
+    "vite": "^8.3.5"
   },
   "dependencies": {
     "vue": "^3.5.44"
   },
   "engines": {
-    "node": "24.22.0"
+    "node": "24.22.2"
   }
 }
