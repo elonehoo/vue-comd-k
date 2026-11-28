@@ -16,13 +16,13 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
   "dependencies": {
-    "@vueuse/core": "^15.0.0",
+    "@vueuse/core": "^15.1.0",
     "pinia": "^4.1.0",
     "slug": "^11.0.1",
     "vitepress": "1.6.4",
     "vue-comd-k": "workspace:*"
   },
   "engines": {
-    "node": "24.22.0"
+    "node": "24.22.3"
   }
 }
